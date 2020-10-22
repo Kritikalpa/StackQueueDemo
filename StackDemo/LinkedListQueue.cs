@@ -27,6 +27,17 @@ namespace StackDemo
             Console.WriteLine("{0} inserted in queue", node.data);
         }
 
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty. Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Dequeued Elemnt : {0} ", this.head.data);
+            this.head = this.head.next;
+        }
+
         internal void Display()
         {
             Node temp = this.head;
