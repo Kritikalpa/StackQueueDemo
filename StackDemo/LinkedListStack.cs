@@ -36,5 +36,35 @@ namespace StackDemo
                 temp = temp.next;
             }
         }
+
+        internal void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("\n{0} is in the top of stack", this.top.data);
+        }
+
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty. Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value poped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
+
+        internal void isEmpty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
     }
 }
