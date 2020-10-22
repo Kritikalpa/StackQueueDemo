@@ -6,7 +6,7 @@ namespace StackDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Stack Demo");
+            Console.WriteLine("Welcome to Stack and Queue Demo");
             LinkedListStack stack = new LinkedListStack();
             stack.Push(70);
             stack.Push(30);
@@ -16,6 +16,12 @@ namespace StackDemo
             stack.Pop();
             stack.Display();
             stack.isEmpty();
+
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
         }
     }
 }
